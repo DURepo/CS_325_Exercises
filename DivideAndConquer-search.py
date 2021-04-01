@@ -15,7 +15,7 @@ def _binary_search(numList, start, end, x):
 
 
 def search(numList, key):
-    return _binary_search(numList, 0, len(numList), key)
+    return _binary_search(numList, 0, len(numList)-1, key)
 
 
 if __name__ == '__main__':
