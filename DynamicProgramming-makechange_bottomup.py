@@ -14,7 +14,7 @@ def makechange_bottomup(coins, amount):
     # we have a valid count of coins if min_count_table[amount] is valid
     if min_count_table[amount] > amount: result = -1
     else: result = min_count_table[amount]
-    print(min_count_table)
+    
     return  result
 
-#print(makechange_bottomup([1,3,5], 8))
+print(makechange_bottomup([1,3,5], 8))
