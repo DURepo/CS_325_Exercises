@@ -7,7 +7,7 @@ def makechange_bottomup(coins, amount):
     for i in range(1, amount+1):  # iterate through all possible amount values from base case
         for j in range(0, len(coins)): #find the number of coins needed for each coin denomination
             coin_val = coins[j]
-            if(coin_val <= amount): # if denomination value is less than amount then we can use the coin
+            if(coin_val <= amount and (i-coin_val)>=0): # if denomination value is less than amount then we can use the coin
                 # replace min_count_table[i] with minumum value of coins possible
                 min_count_table[i] = min(min_count_table[i] , min_count_table[i-coin_val]+1)
 
