@@ -1,15 +1,14 @@
-
 def _binary_search(numList, start, end, x):
     if (start <= end):
         middle = (start + end) // 2
-        if (a[middle] == x):
+        if (numList[middle] == x):
             return middle
 
         if (a[middle] > x):
-            return _binary_search(a, start, middle - 1, x)
+            return _binary_search(numList, start, middle - 1, x)
 
         if (a[middle] < x):
-            return _binary_search(a, middle + 1, end, x)
+            return _binary_search(numList, middle + 1, end, x)
 
     return -1  # not found
 
