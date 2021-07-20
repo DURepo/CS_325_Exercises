@@ -16,7 +16,7 @@ def unbound_knapsackOptimalSolution(W, n, weights, values):
     solution = []
     while w>0:
         solution.append(sol[w])
-        w = w-sol[W]
+        w = w-sol[w]
 
     return solution
 
